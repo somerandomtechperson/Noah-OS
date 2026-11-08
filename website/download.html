@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download NoahOS and learn how to install it.">
+    <title>Download NoahOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span>NoahOS</span>
+    </a>
+
+    <nav>
+        <a href="features.html">Features</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="docs.html">Documentation</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/somerandomtechperson/Noah-OS">GitHub</a>
+    </nav>
+
+    <a class="nav-download" href="download.html">Download</a>
+</header>
+
+<main>
+    <section class="download-hero">
+        <div class="eyebrow">Get started with NoahOS</div>
+        <h1>Your next desktop starts here.</h1>
+        <p>Download NoahOS, prepare your installation media, and discover a different kind of desktop experience.</p>
+    </section>
+
+    <section class="release-card">
+        <div class="release-heading">
+            <div>
+                <div class="section-label">Latest release</div>
+                <h2>NoahOS 0.1.0</h2>
+                <p>Initial public release · November 8, 2026</p>
+            </div>
+            <span class="release-badge">Pre-release</span>
+        </div>
+
+        <div class="release-details">
+            <div>
+                <span>Architecture</span>
+                <strong>x86_64 (64-bit)</strong>
+            </div>
+            <div>
+                <span>Base</span>
+                <strong>Arch Linux</strong>
+            </div>
+            <div>
+                <span>Image size</span>
+                <strong>Approximately 2.14 GiB</strong>
+            </div>
+        </div>
+
+        <div class="download-files">
+            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/v0.1.0/noahos-2026.11.08-x86_64.iso.part-00">
+                <span>
+                    <strong>ISO part 1</strong>
+                    <small>noahos-2026.11.08-x86_64.iso.part-00</small>
+                </span>
+                <span class="file-action">Download ↗</span>
+            </a>
+
+            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/v0.1.0/noahos-2026.11.08-x86_64.iso.part-01">
+                <span>
+                    <strong>ISO part 2</strong>
+                    <small>noahos-2026.11.08-x86_64.iso.part-01</small>
+                </span>
+                <span class="file-action">Download ↗</span>
+            </a>
+
+            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/v0.1.0/SHA256SUMS.txt">
+                <span>
+                    <strong>SHA256 checksums</strong>
+                    <small>SHA256SUMS.txt</small>
+                </span>
+                <span class="file-action">Download ↗</span>
+            </a>
+        </div>
+
+        <p class="release-note">
+            Download both ISO parts and the checksum file.
+            Keep all three files together in the same folder.
+        </p>
+
+        <a class="all-releases" href="https://github.com/somerandomtechperson/Noah-OS/releases">
+            View all NoahOS releases ↗
+        </a>
+    </section>
+</main>
+
+<footer>
+    <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span>NoahOS</span>
+    </a>
+    <p>Built with care. Powered by Arch Linux.</p>
+    <a href="https://github.com/somerandomtechperson/Noah-OS">GitHub ↗</a>
+</footer>
+
+</body>
+</html>
+
+<section class="install-section">
+    <div class="section-label">Installation guide</div>
+    <h2>From download to desktop.</h2>
+    <p class="install-intro">Follow these steps to prepare and boot NoahOS.</p>
+
+    <div class="install-grid">
+        <article class="install-step">
+            <span class="step-number">01</span>
+            <h3>Download the files</h3>
+            <p>Download both ISO parts and the SHA256SUMS.txt file above. Keep them together in one folder.</p>
+        </article>
+
+        <article class="install-step">
+            <span class="step-number">02</span>
+            <h3>Rebuild the ISO</h3>
+            <p>On Windows, open Command Prompt in the download folder and run:</p>
+            <pre><code>copy /b noahos-2026.11.08-x86_64.iso.part-00+noahos-2026.11.08-x86_64.iso.part-01 noahos-2026.11.08-x86_64.iso</code></pre>
+            <p>On Linux, run:</p>
+            <pre><code>cat noahos-2026.11.08-x86_64.iso.part-* &gt; noahos-2026.11.08-x86_64.iso</code></pre>
+        </article>
+
+        <article class="install-step">
+            <span class="step-number">03</span>
+            <h3>Verify the image</h3>
+            <p>On Linux, run:</p>
+            <pre><code>sha256sum -c SHA256SUMS.txt</code></pre>
+            <p>On Windows PowerShell, run:</p>
+            <pre><code>Get-FileHash .\noahos-2026.11.08-x86_64.iso -Algorithm SHA256</code></pre>
+            <p>Compare the result with this expected SHA256:</p>
+            <code class="checksum">cf7d0a4181642cb8d4f4db1e25a0e0db4659f1cc26f88f6a744c77ac1a6d8f63</code>
+        </article>
+
+        <article class="install-step">
+            <span class="step-number">04</span>
+            <h3>Create a bootable USB</h3>
+            <p>Use Rufus on Windows or KDE ISO Image Writer on Linux to write the reconstructed ISO to a USB drive.</p>
+            <p><strong>Important:</strong> Writing the image erases the selected USB drive. Double-check the target before starting.</p>
+        </article>
+
+        <article class="install-step">
+            <span class="step-number">05</span>
+            <h3>Boot NoahOS</h3>
+            <p>Restart your computer, open its boot menu, and select the USB drive. Choose the NoahOS boot option to start the live environment.</p>
+        </article>
+    </div>
+
+    <div class="install-note">
+        <strong>Before you begin</strong>
+        <p>NoahOS 0.1.0 is a pre-release intended for testing. Back up important data and test the live environment before considering installation.</p>
+    </div>
+</section>
+

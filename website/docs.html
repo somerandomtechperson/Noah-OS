@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official NoahOS documentation and getting started guide.">
+    <title>Documentation — NoahOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span>NoahOS</span>
+    </a>
+
+    <nav>
+        <a href="features.html">Features</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="docs.html">Documentation</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/somerandomtechperson/Noah-OS">GitHub</a>
+    </nav>
+
+    <a class="nav-download" href="download.html">Download</a>
+</header>
+
+<main class="docs-layout">
+
+    <aside class="docs-sidebar">
+        <span class="eyebrow">DOCUMENTATION</span>
+        <h3>NoahOS 0.1.0</h3>
+
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#requirements">Before you begin</a>
+            <a href="#download">Download NoahOS</a>
+            <a href="#verify">Verify your download</a>
+            <a href="#usb">Create a bootable USB</a>
+            <a href="#boot">Boot NoahOS</a>
+            <a href="#live">Using the live environment</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+        </nav>
+    </aside>
+
+    <article class="docs-content">
+
+        <section id="overview" class="docs-section docs-intro">
+            <span class="eyebrow">GETTING STARTED</span>
+            <h1>NoahOS Documentation</h1>
+            <p class="docs-lead">
+                Everything you need to download, prepare, and explore
+                the NoahOS live desktop.
+            </p>
+            <div class="docs-notice">
+                <strong>Early release — Version 0.1.0</strong>
+                <p>
+                    NoahOS is an early-stage project. Features,
+                    instructions, and system behavior may change
+                    between releases.
+                </p>
+            </div>
+        </section>
+
+        <section id="requirements" class="docs-section">
+            <h2>Before you begin</h2>
+            <p>
+                NoahOS is a bootable Arch Linux-based live operating
+                system powered by KDE Plasma. You can explore the
+                desktop without installing it.
+            </p>
+            <h3>What you'll need</h3>
+            <ul>
+                <li>A compatible 64-bit x86 computer.</li>
+                <li>A USB flash drive with enough capacity for the image.</li>
+                <li>A computer capable of booting from USB.</li>
+                <li>An internet connection to download the release files.</li>
+            </ul>
+            <div class="docs-warning">
+                <strong>Important</strong>
+                <p>
+                    Writing an image to a USB drive erases the existing
+                    contents of the selected drive. Back up anything
+                    important before proceeding.
+                </p>
+            </div>
+        </section>
+
+        <section id="download" class="docs-section">
+            <h2>Download NoahOS</h2>
+            <p>
+                The official NoahOS 0.1.0 release is hosted on GitHub.
+                The ISO is provided as two split files.
+            </p>
+            <a class="button button-primary" href="download.html">
+                Visit the download page
+            </a>
+            <h3>Download these files</h3>
+            <ul>
+                <li><code>noahos-2026.11.08-x86_64.iso.part-00</code></li>
+                <li><code>noahos-2026.11.08-x86_64.iso.part-01</code></li>
+                <li><code>SHA256SUMS.txt</code></li>
+            </ul>
+            <p>
+                Save all three files into the same folder before
+                continuing.
+            </p>
+        </section>
+
+        <section id="verify" class="docs-section">
+            <h2>Verify your download</h2>
+            <p>
+                Before writing the image to a USB drive, reconstruct
+                the ISO from its two parts.
+            </p>
+
+            <h3>Linux</h3>
+            <pre><code>cat noahos-2026.11.08-x86_64.iso.part-* &gt; noahos-2026.11.08-x86_64.iso</code></pre>
+
+            <h3>Windows Command Prompt</h3>
+            <pre><code>copy /b noahos-2026.11.08-x86_64.iso.part-00+noahos-2026.11.08-x86_64.iso.part-01 noahos-2026.11.08-x86_64.iso</code></pre>
+
+            <h3>Check the SHA256 checksum</h3>
+            <p>On Linux, run:</p>
+            <pre><code>sha256sum -c SHA256SUMS.txt</code></pre>
+
+            <p>On Windows PowerShell, run:</p>
+            <pre><code>Get-FileHash .\noahos-2026.11.08-x86_64.iso -Algorithm SHA256</code></pre>
+
+            <p>The expected SHA256 hash is:</p>
+            <pre><code>cf7d0a4181642cb8d4f4db1e25a0e0db4659f1cc26f88f6a744c77ac1a6d8f63</code></pre>
+            <p>
+                The calculated hash should match exactly. If it
+                doesn't, check that both parts downloaded completely
+                and try again.
+            </p>
+        </section>
+
+        <section id="usb" class="docs-section">
+            <h2>Create a bootable USB</h2>
+            <p>
+                Once the ISO has been reconstructed and verified,
+                write it to a USB flash drive using an image-writing
+                utility.
+            </p>
+
+            <h3>Windows — Rufus</h3>
+            <ol>
+                <li>Connect your USB flash drive.</li>
+                <li>Open Rufus.</li>
+                <li>Select the correct USB device.</li>
+                <li>Choose the reconstructed NoahOS ISO.</li>
+                <li>Review the selected device carefully.</li>
+                <li>Start the writing process and follow the prompts.</li>
+            </ol>
+
+            <h3>Linux — KDE ISO Image Writer</h3>
+            <ol>
+                <li>Connect your USB flash drive.</li>
+                <li>Open KDE ISO Image Writer.</li>
+                <li>Select the NoahOS ISO file.</li>
+                <li>Select the correct USB device.</li>
+                <li>Confirm the selection and write the image.</li>
+            </ol>
+
+            <div class="docs-warning">
+                <strong>Double-check the target drive</strong>
+                <p>
+                    Selecting the wrong drive can erase important data.
+                    Make sure the USB device is selected before writing.
+                </p>
+            </div>
+        </section>
+
+        <section id="boot" class="docs-section">
+            <h2>Boot NoahOS</h2>
+            <p>
+                NoahOS supports both UEFI and legacy BIOS boot modes.
+            </p>
+            <ol>
+                <li>Leave the USB drive connected.</li>
+                <li>Restart your computer.</li>
+                <li>Open the computer's boot selection menu.</li>
+                <li>Select the USB device.</li>
+                <li>Allow NoahOS to start.</li>
+            </ol>
+            <p>
+                Boot menu keys vary by computer manufacturer.
+                Consult your computer's documentation if needed.
+            </p>
+        </section>
+
+        <section id="live" class="docs-section">
+            <h2>Using the live environment</h2>
+            <p>
+                Once NoahOS has finished loading, you can explore
+                the KDE Plasma desktop and its available applications.
+            </p>
+            <p>
+                NoahOS runs as a live environment. It does not require
+                installation to explore the desktop.
+            </p>
+            <div class="docs-notice">
+                <strong>Live session behavior</strong>
+                <p>
+                    The current release can continue running from
+                    memory after the boot media is removed, once the
+                    system has fully loaded. Avoid removing the media
+                    before startup is complete.
+                </p>
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="docs-section">
+            <h2>Troubleshooting</h2>
+
+            <h3>USB drive does not appear in the boot menu</h3>
+            <ul>
+                <li>Check that the USB image was written successfully.</li>
+                <li>Try another USB port.</li>
+                <li>Check your computer's boot menu and firmware settings.</li>
+            </ul>
+
+            <h3>NoahOS does not start</h3>
+            <ul>
+                <li>Verify the downloaded ISO checksum.</li>
+                <li>Recreate the bootable USB using the verified ISO.</li>
+                <li>Try the other available boot mode if supported.</li>
+            </ul>
+
+            <h3>Still having trouble?</h3>
+            <p>
+                Visit the
+                <a href="https://github.com/somerandomtechperson/Noah-OS/issues">
+                    NoahOS GitHub issue tracker
+                </a>
+                to report a problem or see existing reports.
+            </p>
+        </section>
+
+        <div class="docs-footer">
+            <p>Documentation for NoahOS 0.1.0</p>
+            <a href="download.html">Get NoahOS →</a>
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span>NoahOS</span>
+    </a>
+    <p>Built with care. Powered by Arch Linux.</p>
+    <a href="https://github.com/somerandomtechperson/Noah-OS">GitHub ↗</a>
+</footer>
+
+</body>
+</html>
