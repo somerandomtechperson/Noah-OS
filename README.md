@@ -17,11 +17,21 @@ NoahOS is a personal Linux distribution project focused on creating a clean, mod
 
 ## Screenshots
 
-Screenshots coming soon.
+### Desktop
+
+![NoahOS Desktop](screenshots/desktop.png)
+
+### Applications
+
+![NoahOS Applications](screenshots/applications.png)
+
+### System Information
+
+![NoahOS System Information](screenshots/system.png)
 
 ## Getting Started
 
-Bootable ISO downloads and instructions will be provided through the project's GitHub Releases.
+Bootable ISO downloads and installation instructions will be provided through the project's [GitHub Releases](https://github.com/somerandomtechperson/Noah-OS/releases).
 
 ## Project Status
 
@@ -35,6 +45,18 @@ The project is currently in development. More testing, improvements, and documen
 - [KDE Plasma](https://kde.org/plasma-desktop/)
 - [Archiso](https://wiki.archlinux.org/title/Archiso)
 
+## Contributing
+
+Contributions, suggestions, and bug reports are welcome!
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
 ## License
 
-License information coming soon.
+Original NoahOS project files are licensed under the [MIT License](LICENSE).
+
+Third-party software and assets retain their respective licenses. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for additional information.
+
+---
+
+**NoahOS — A Linux desktop built from the ground up.**
