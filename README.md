@@ -2,6 +2,8 @@
 
 **A custom Arch Linux-based distribution built around KDE Plasma.**
 
+# Visit the NoahOS website: https://somerandomtechperson.github.io/Noah-OS/index.html
+
 NoahOS is a personal Linux distribution project focused on creating a clean, modern, and cohesive desktop experience. Built on Arch Linux and powered by KDE Plasma, NoahOS combines a customized desktop environment with a bootable live system.
 
 > Currently under development. Features and documentation may change.
