@@ -1,0 +1,14 @@
+# Build output
+/build/
+
+# Generated ISO images
+*.iso
+
+# Temporary inspection files
+noahos-inspection.tar.gz
+noahos-iso-audit.txt
+
+# Logs and temporary files
+*.log
+*.tmp
+*~

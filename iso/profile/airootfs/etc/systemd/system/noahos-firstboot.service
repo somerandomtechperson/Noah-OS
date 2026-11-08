@@ -1,0 +1,14 @@
+[Unit]
+Description=NoahOS First Boot Setup
+After=local-fs.target
+Before=sddm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -x /usr/local/bin/noahos-firstboot
+StandardOutput=journal+console
+StandardError=journal+console
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

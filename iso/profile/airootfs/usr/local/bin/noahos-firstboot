@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+/usr/bin/groupadd -f wheel
+
+if ! /usr/bin/id noah >/dev/null 2>&1; then
+    /usr/bin/useradd -u 1000 -G wheel -s /usr/bin/bash -m noah
+fi
+
+/usr/bin/passwd -d noah
+/usr/bin/usermod -U noah
+
+/usr/bin/install -d -o noah -g noah /home/noah
+/usr/bin/cp -an /etc/skel/. /home/noah/
+/usr/bin/chown -R noah:noah /home/noah

@@ -1,0 +1,21 @@
+========================================
+              Welcome to NoahOS
+========================================
+
+A clean, modern Linux experience built on Arch Linux.
+
+Your system is ready.
+
+Network:
+  Wi-Fi: Connect using NetworkManager
+  Ethernet: Automatic DHCP configuration
+
+Useful commands:
+  nmtui       Network connection manager
+  pacman      Package manager
+  fastfetch   System information (if installed)
+
+Documentation:
+  https://wiki.archlinux.org/
+
+Enjoy NoahOS.
