@@ -31,7 +31,7 @@ NoahOS is a personal Linux distribution project focused on creating a clean, mod
 
 ## Getting Started
 
-Bootable ISO downloads and instructions will be provided through [GitHub Releases](https://github.com/somerandomtechperson/Noah-OS/releases).
+Bootable ISO downloads and instructions will be provided through the project's [GitHub Releases](https://github.com/somerandomtechperson/Noah-OS/releases).
 
 ## Project Status
 
