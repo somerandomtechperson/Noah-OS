@@ -31,6 +31,27 @@ NoahOS is a personal Linux distribution project focused on creating a clean, mod
 
 ![NoahOS System Information](screenshots/system.png)
 
+## Performance Comparison
+
+Both screenshots were captured while the same laptop was idle, with no user applications running. The system uses an **11th Gen Intel Core i5-1135G7** processor.
+
+| Reading | Windows | NoahOS |
+|---|---:|---:|
+| CPU utilization | 23% | 4.9% |
+| Memory in use | 6.2 / 7.7 GB (81%) | 1.4 / 7.5 GiB (~19%) |
+
+### Windows
+
+![Windows Task Manager showing CPU and memory usage](website/assets/performance-windows.png)
+
+### NoahOS
+
+![NoahOS System Monitor showing CPU and memory usage](website/assets/performance-noahos.png)
+
+In these snapshots, NoahOS showed approximately **79% lower CPU utilization** and substantially lower reported memory use.
+
+*These are idle, point-in-time readings—not a controlled benchmark or a guarantee of performance on other hardware. The screenshots use different system monitors and memory units (GB vs. GiB), and readings can vary with uptime, background services, drivers, and system state. See the [full performance comparison](https://somerandomtechperson.github.io/Noah-OS/performance.html) for context.*
+
 ## Getting Started
 
 Bootable ISO downloads and instructions will be provided through the project's [GitHub Releases](https://github.com/somerandomtechperson/Noah-OS/releases).

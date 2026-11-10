@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An idle CPU and memory comparison between NoahOS and Windows on the same Intel laptop.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Performance — NoahOS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .performance-hero { max-width: 900px; margin: 95px auto 65px; padding: 0 24px; text-align: center; }
+        .performance-hero h1 { margin: 18px 0; font-size: clamp(2.7rem, 6vw, 4.6rem); letter-spacing: -.06em; line-height: 1.05; }
+        .performance-hero p { max-width: 680px; margin: 0 auto; color: #737782; font-size: 1.1rem; line-height: 1.8; }
+        .performance-wrap { max-width: 1160px; margin: 0 auto 95px; padding: 0 24px; }
+        .performance-hardware { margin: 0 auto 28px; padding: 17px 22px; border: 1px solid #e9eaec; border-radius: 13px; text-align: center; color: #626773; font-size: .95rem; }
+        .performance-hardware strong { color: #202124; }
+        .performance-screens { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+        .performance-screen { padding: 16px; border: 1px solid #e9eaec; border-radius: 17px; background: #fff; box-shadow: 0 12px 35px rgba(25,35,50,.05); }
+        .performance-screen h2 { margin: 3px 0 13px; font-size: 1.25rem; letter-spacing: -.03em; }
+        .performance-screen img { display: block; width: 100%; height: auto; border-radius: 9px; border: 1px solid #eceef1; }
+        .performance-metrics { margin-top: 55px; }
+        .performance-metrics h2, .performance-notes h2 { margin-bottom: 12px; font-size: 2rem; letter-spacing: -.045em; }
+        .performance-metrics > p, .performance-notes p { color: #737782; line-height: 1.75; }
+        .metric-table { width: 100%; margin-top: 24px; border-collapse: collapse; text-align: left; }
+        .metric-table th, .metric-table td { padding: 15px 17px; border-bottom: 1px solid #e9eaec; }
+        .metric-table th { color: #737782; font-size: .82rem; font-weight: 650; }
+        .metric-table td { font-size: .98rem; }
+        .metric-table td:not(:first-child) { font-weight: 650; }
+        .performance-callout { margin-top: 25px; padding: 22px 24px; border: 1px solid #e9eaec; border-radius: 14px; background: #f7f8fa; }
+        .performance-callout strong { color: #202124; }
+        .performance-notes { margin-top: 48px; }
+        @media (max-width: 720px) { .performance-screens { grid-template-columns: 1fr; } .performance-hero { margin: 70px auto 45px; } .metric-table th,.metric-table td { padding: 12px 9px; font-size: .86rem; } }
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span>NoahOS</span></a>
+    <nav>
+        <a href="features.html">Features</a>
+        <a href="performance.html">Performance</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="docs.html">Documentation</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/somerandomtechperson/Noah-OS">GitHub</a>
+    </nav>
+    <a class="nav-download" href="download.html">Download</a>
+</header>
+<main>
+    <section class="performance-hero">
+        <div class="eyebrow">Same laptop. Two operating systems.</div>
+        <h1>Lightweight by design.</h1>
+        <p>A side-by-side look at CPU and memory use on an 11th Gen Intel Core i5-1135G7 system, with both operating systems sitting idle and no user applications running.</p>
+    </section>
+    <section class="performance-wrap">
+        <div class="performance-hardware"><strong>Test hardware</strong> &nbsp; 11th Gen Intel Core i5-1135G7 · 4 cores / 8 logical processors · approximately 8 GB RAM</div>
+        <div class="performance-screens">
+            <article class="performance-screen">
+                <h2>Windows · Task Manager</h2>
+                <img src="assets/performance-windows.png" alt="Windows Task Manager performance view showing 23 percent CPU utilization and 6.2 of 7.7 GB memory in use">
+            </article>
+            <article class="performance-screen">
+                <h2>NoahOS · KDE System Monitor</h2>
+                <img src="assets/performance-noahos.png" alt="NoahOS KDE System Monitor overview showing 4.9 percent CPU utilization and 1.4 of 7.5 GiB memory in use">
+            </article>
+        </div>
+        <section class="performance-metrics">
+            <div class="section-label">The readings</div>
+            <h2>Idle resource usage</h2>
+            <p>These are the values visible in the two screenshots, captured while both systems were idle.</p>
+            <table class="metric-table">
+                <thead><tr><th>Measurement</th><th>Windows</th><th>NoahOS</th></tr></thead>
+                <tbody>
+                    <tr><td>CPU utilization</td><td>23%</td><td>4.9%</td></tr>
+                    <tr><td>Memory in use</td><td>6.2 / 7.7 GB</td><td>1.4 / 7.5 GiB</td></tr>
+                    <tr><td>Displayed memory usage</td><td>81%</td><td>~19%</td></tr>
+                    <tr><td>Process count</td><td>187</td><td>Not shown</td></tr>
+                </tbody>
+            </table>
+            <div class="performance-callout"><strong>What stands out:</strong> In these snapshots, NoahOS showed approximately 79% lower CPU utilization than Windows, along with substantially lower reported memory use.</div>
+        </section>
+        <section class="performance-notes">
+            <div class="section-label">A note on the comparison</div>
+            <h2>What these numbers mean</h2>
+            <p>Both screenshots were taken on the same laptop while idle, with no user applications running. They are point-in-time readings, not a controlled benchmark. The screenshots come from different system monitors and report memory using different units (GB and GiB), so the figures are not perfectly identical measurements. Uptime, background services, drivers, hardware support, and system state can all affect resource use. Results will vary across machines and configurations.</p>
+        </section>
+    </section>
+    <section class="features-cta">
+        <h2>Explore NoahOS.</h2>
+        <p>Learn more about the project and follow its development.</p>
+        <a class="button button-primary" href="index.html">Back to NoahOS</a>
+    </section>
+</main>
+<footer>
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span>NoahOS</span></a>
+    <p>Built with care. Powered by Arch Linux.</p>
+    <a href="https://github.com/somerandomtechperson/Noah-OS">GitHub ↗</a>
+</footer>
+</body>
+</html>
