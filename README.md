@@ -46,7 +46,6 @@ Both screenshots were captured while the same laptop was idle, with no user appl
 
 ### NoahOS
 
-![NoahOS System Monitor showing CPU and memory usage](website/assets/performance-noahos.png)
 
 In these snapshots, NoahOS showed approximately **79% lower CPU utilization** and substantially lower reported memory use.
 
