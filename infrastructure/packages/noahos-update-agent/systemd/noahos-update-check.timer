@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily NoahOS update check
+
+[Timer]
+OnCalendar=*-*-* 07:30:00
+Persistent=true
+Unit=noahos-update-check.service
+
+[Install]
+WantedBy=timers.target

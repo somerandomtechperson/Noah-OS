@@ -5,6 +5,7 @@ iso_name="noahos"
 iso_label="NOAHOS_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="NoahOS"
 iso_application="NoahOS Live Environment"
+buildmodes=('iso')
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 bootmodes=('bios.syslinux'

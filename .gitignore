@@ -12,3 +12,16 @@ noahos-iso-audit.txt
 *.log
 *.tmp
 *~
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+
+# Arch package build artifacts
+**/pkg/
+**/*.pkg.tar.*
+
+# makepkg downloaded sources and extraction directory
+/infrastructure/packages/noahos-update-agent/src/
+/infrastructure/packages/noahos-update-agent/noahos-update-check.service
+/infrastructure/packages/noahos-update-agent/noahos-update-check.timer

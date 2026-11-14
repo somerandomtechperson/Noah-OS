@@ -1,0 +1,13 @@
+[Unit]
+Description=Check for available NoahOS system updates
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+DynamicUser=yes
+StateDirectory=noahos-update-agent
+ExecStart=/usr/lib/noahos-update-agent/noahos-update-check.py
+StandardOutput=file:/var/lib/noahos-update-agent/status.json
+StandardError=journal
+Nice=10

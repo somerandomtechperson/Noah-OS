@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "distribution": "NoahOS",
+  "channel": "rolling",
+  "architecture": "x86_64",
+  "build": {
+    "build_id": null,
+    "release_date": null,
+    "status": "development"
+  },
+  "release_notes": {
+    "title": "NoahOS Development Build",
+    "summary": "Development build of the NoahOS rolling distribution.",
+    "items": [
+      "Arch Linux base system",
+      "KDE Plasma desktop environment",
+      "Native NoahOS update checker development"
+    ]
+  },
+  "updates": {
+    "repository": null,
+    "download_size_bytes": null,
+    "minimum_updater_version": "0.1.0"
+  }
+}

@@ -1,0 +1,40 @@
+pkgname=noahos-update-agent
+pkgver=0.1.0
+pkgrel=4
+pkgdesc="Native update checking service for NoahOS"
+arch=('any')
+url="https://github.com/somerandomtechperson/Noah-OS"
+license=('MIT')
+depends=('python' 'pacman-contrib')
+makedepends=('fakeroot')
+
+source=(
+    'noahos-update-check.py'
+    "noahos-update-check.service::file://${startdir}/systemd/noahos-update-check.service"
+    "noahos-update-check.timer::file://${startdir}/systemd/noahos-update-check.timer"
+)
+
+sha256sums=(
+    'b1847ccbeddeba9a8ad7f41f5679f7b740445870ee076d99a217add1526fcc1d'
+    'e44aced429cfb955bcddf7997bcfbbdb176873e9aa01460bcaaa07e8a400fcc9'
+    'b770a477885e0176fa849ac3603d799a03d0f9aa52d949faa5fc1da13af6a309'
+)
+
+package() {
+    install -Dm755 "$srcdir/noahos-update-check.py" \
+        "$pkgdir/usr/lib/noahos-update-agent/noahos-update-check.py"
+
+    install -Dm644 "$srcdir/noahos-update-check.service" \
+        "$pkgdir/usr/lib/systemd/system/noahos-update-check.service"
+
+    install -Dm644 "$srcdir/noahos-update-check.timer" \
+        "$pkgdir/usr/lib/systemd/system/noahos-update-check.timer"
+
+    install -Dm644 /dev/stdin \
+        "$pkgdir/usr/lib/systemd/system-preset/90-noahos-update-agent.preset" <<'PRESET'
+enable noahos-update-check.timer
+PRESET
+
+    install -Dm644 "$startdir/../../../LICENSE" \
+        "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
