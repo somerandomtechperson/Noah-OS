@@ -1,0 +1,22 @@
+pkgname=noahos-keyring
+pkgver=2026.11.16
+pkgrel=1
+pkgdesc="NoahOS package signing keys"
+arch=('any')
+url="https://github.com/somerandomtechperson/Noah-OS"
+license=('custom')
+depends=('pacman' 'gnupg')
+install=noahos-keyring.install
+source=()
+sha256sums=()
+
+package() {
+    install -Dm644 "$startdir/keyrings/noahos.gpg" \
+        "$pkgdir/usr/share/pacman/keyrings/noahos.gpg"
+
+    install -Dm644 "$startdir/keyrings/noahos-trusted" \
+        "$pkgdir/usr/share/pacman/keyrings/noahos-trusted"
+
+    install -Dm644 "$startdir/keyrings/noahos-revoked" \
+        "$pkgdir/usr/share/pacman/keyrings/noahos-revoked"
+}

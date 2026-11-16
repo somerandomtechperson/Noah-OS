@@ -25,3 +25,8 @@ __pycache__/
 /infrastructure/packages/noahos-update-agent/src/
 /infrastructure/packages/noahos-update-agent/noahos-update-check.service
 /infrastructure/packages/noahos-update-agent/noahos-update-check.timer
+
+# NoahOS signing keys: publish only the public key files
+infrastructure/keys/*
+!infrastructure/keys/noahos-package-signing.asc
+!infrastructure/keys/noahos.gpg

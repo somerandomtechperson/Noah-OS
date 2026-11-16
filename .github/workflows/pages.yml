@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'website/**'
+      - 'repository/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -28,10 +29,16 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload website
+      - name: Assemble website and package repository
+        run: |
+          mkdir -p public/repo
+          cp -a website/. public/
+          cp -a repository/. public/repo/
+
+      - name: Upload website and package repository
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website
+          path: public
 
   deploy:
     environment:

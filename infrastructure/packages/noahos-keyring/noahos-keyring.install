@@ -1,0 +1,7 @@
+post_install() {
+    /usr/bin/pacman-key --populate noahos
+}
+
+post_upgrade() {
+    /usr/bin/pacman-key --populate noahos
+}
