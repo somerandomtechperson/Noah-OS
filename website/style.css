@@ -345,7 +345,7 @@ footer .brand {
 }
 
 /* Keep the expanded navigation within the header on narrow tablet widths. */
-@media (min-width: 701px) and (max-width: 800px) {
+@media (min-width: 700px) and (max-width: 800px) {
     .navbar {
         height: auto;
         min-height: 66px;
