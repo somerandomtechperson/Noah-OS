@@ -31,7 +31,7 @@
 
     <aside class="docs-sidebar">
         <span class="eyebrow">DOCUMENTATION</span>
-        <h3>NoahOS 0.1.0</h3>
+        <h3>NoahOS 2026.11.12</h3>
 
         <nav>
             <a href="#overview">Overview</a>
@@ -55,7 +55,7 @@
                 the NoahOS live desktop.
             </p>
             <div class="docs-notice">
-                <strong>Early release — Version 0.1.0</strong>
+                <strong>Development build — 2026.11.12</strong>
                 <p>
                     NoahOS is an early-stage project. Features,
                     instructions, and system behavior may change
@@ -91,7 +91,7 @@
         <section id="download" class="docs-section">
             <h2>Download NoahOS</h2>
             <p>
-                The official NoahOS 0.1.0 release is hosted on GitHub.
+                The published NoahOS 2026.11.12 development build is hosted on GitHub.
                 The ISO is provided as two split files.
             </p>
             <a class="button button-primary" href="download.html">
@@ -99,9 +99,9 @@
             </a>
             <h3>Download these files</h3>
             <ul>
-                <li><code>noahos-2026.11.08-x86_64.iso.part-00</code></li>
-                <li><code>noahos-2026.11.08-x86_64.iso.part-01</code></li>
-                <li><code>SHA256SUMS.txt</code></li>
+                <li><code>noahos-2026.11.12-x86_64.iso.part.01</code></li>
+                <li><code>noahos-2026.11.12-x86_64.iso.part.02</code></li>
+                <li><code>noahos-2026.11.12-x86_64.iso.sha256</code></li>
             </ul>
             <p>
                 Save all three files into the same folder before
@@ -117,20 +117,20 @@
             </p>
 
             <h3>Linux</h3>
-            <pre><code>cat noahos-2026.11.08-x86_64.iso.part-* &gt; noahos-2026.11.08-x86_64.iso</code></pre>
+            <pre><code>cat noahos-2026.11.12-x86_64.iso.part.* &gt; noahos-2026.11.12-x86_64.iso</code></pre>
 
             <h3>Windows Command Prompt</h3>
-            <pre><code>copy /b noahos-2026.11.08-x86_64.iso.part-00+noahos-2026.11.08-x86_64.iso.part-01 noahos-2026.11.08-x86_64.iso</code></pre>
+            <pre><code>copy /b noahos-2026.11.12-x86_64.iso.part.01+noahos-2026.11.12-x86_64.iso.part.02 noahos-2026.11.12-x86_64.iso</code></pre>
 
             <h3>Check the SHA256 checksum</h3>
             <p>On Linux, run:</p>
-            <pre><code>sha256sum -c SHA256SUMS.txt</code></pre>
+            <pre><code>sha256sum -c noahos-2026.11.12-x86_64.iso.sha256</code></pre>
 
             <p>On Windows PowerShell, run:</p>
-            <pre><code>Get-FileHash .\noahos-2026.11.08-x86_64.iso -Algorithm SHA256</code></pre>
+            <pre><code>Get-FileHash .\noahos-2026.11.12-x86_64.iso -Algorithm SHA256</code></pre>
 
             <p>The expected SHA256 hash is:</p>
-            <pre><code>cf7d0a4181642cb8d4f4db1e25a0e0db4659f1cc26f88f6a744c77ac1a6d8f63</code></pre>
+            <pre><code>01695f80ef78d31541fd0c60f58394137a386266281ea7f68118946c94b81b0c</code></pre>
             <p>
                 The calculated hash should match exactly. If it
                 doesn't, check that both parts downloaded completely
@@ -241,7 +241,7 @@
         </section>
 
         <div class="docs-footer">
-            <p>Documentation for NoahOS 0.1.0</p>
+            <p>Documentation for NoahOS 2026.11.12</p>
             <a href="download.html">Get NoahOS →</a>
         </div>
 

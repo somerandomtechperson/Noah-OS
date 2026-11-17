@@ -38,8 +38,8 @@
         <div class="release-heading">
             <div>
                 <div class="section-label">Latest release</div>
-                <h2>NoahOS 0.1.0</h2>
-                <p>Initial public release · November 8, 2026</p>
+                <h2>NoahOS 2026.11.12 Development Build</h2>
+                <p>Rolling development build · November 12, 2026</p>
             </div>
             <span class="release-badge">Pre-release</span>
         </div>
@@ -60,26 +60,26 @@
         </div>
 
         <div class="download-files">
-            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/v0.1.0/noahos-2026.11.08-x86_64.iso.part-00">
+            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/2026.11.12/noahos-2026.11.12-x86_64.iso.part.01">
                 <span>
                     <strong>ISO part 1</strong>
-                    <small>noahos-2026.11.08-x86_64.iso.part-00</small>
+                    <small>noahos-2026.11.12-x86_64.iso.part.01</small>
                 </span>
                 <span class="file-action">Download ↗</span>
             </a>
 
-            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/v0.1.0/noahos-2026.11.08-x86_64.iso.part-01">
+            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/2026.11.12/noahos-2026.11.12-x86_64.iso.part.02">
                 <span>
                     <strong>ISO part 2</strong>
-                    <small>noahos-2026.11.08-x86_64.iso.part-01</small>
+                    <small>noahos-2026.11.12-x86_64.iso.part.02</small>
                 </span>
                 <span class="file-action">Download ↗</span>
             </a>
 
-            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/v0.1.0/SHA256SUMS.txt">
+            <a class="download-file" href="https://github.com/somerandomtechperson/Noah-OS/releases/download/2026.11.12/noahos-2026.11.12-x86_64.iso.sha256">
                 <span>
                     <strong>SHA256 checksums</strong>
-                    <small>SHA256SUMS.txt</small>
+                    <small>noahos-2026.11.12-x86_64.iso.sha256</small>
                 </span>
                 <span class="file-action">Download ↗</span>
             </a>
@@ -104,27 +104,27 @@
         <article class="install-step">
             <span class="step-number">01</span>
             <h3>Download the files</h3>
-            <p>Download both ISO parts and the SHA256SUMS.txt file above. Keep them together in one folder.</p>
+            <p>Download both ISO parts and the noahos-2026.11.12-x86_64.iso.sha256 file above. Keep them together in one folder.</p>
         </article>
 
         <article class="install-step">
             <span class="step-number">02</span>
             <h3>Rebuild the ISO</h3>
             <p>On Windows, open Command Prompt in the download folder and run:</p>
-            <pre><code>copy /b noahos-2026.11.08-x86_64.iso.part-00+noahos-2026.11.08-x86_64.iso.part-01 noahos-2026.11.08-x86_64.iso</code></pre>
+            <pre><code>copy /b noahos-2026.11.12-x86_64.iso.part.01+noahos-2026.11.12-x86_64.iso.part.02 noahos-2026.11.12-x86_64.iso</code></pre>
             <p>On Linux, run:</p>
-            <pre><code>cat noahos-2026.11.08-x86_64.iso.part-* &gt; noahos-2026.11.08-x86_64.iso</code></pre>
+            <pre><code>cat noahos-2026.11.12-x86_64.iso.part.* &gt; noahos-2026.11.12-x86_64.iso</code></pre>
         </article>
 
         <article class="install-step">
             <span class="step-number">03</span>
             <h3>Verify the image</h3>
             <p>On Linux, run:</p>
-            <pre><code>sha256sum -c SHA256SUMS.txt</code></pre>
+            <pre><code>sha256sum -c noahos-2026.11.12-x86_64.iso.sha256</code></pre>
             <p>On Windows PowerShell, run:</p>
-            <pre><code>Get-FileHash .\noahos-2026.11.08-x86_64.iso -Algorithm SHA256</code></pre>
+            <pre><code>Get-FileHash .\noahos-2026.11.12-x86_64.iso -Algorithm SHA256</code></pre>
             <p>Compare the result with this expected SHA256:</p>
-            <code class="checksum">cf7d0a4181642cb8d4f4db1e25a0e0db4659f1cc26f88f6a744c77ac1a6d8f63</code>
+            <code class="checksum">01695f80ef78d31541fd0c60f58394137a386266281ea7f68118946c94b81b0c</code>
         </article>
 
         <article class="install-step">
@@ -143,7 +143,7 @@
 
     <div class="install-note">
         <strong>Before you begin</strong>
-        <p>NoahOS 0.1.0 is a pre-release intended for testing. Back up important data and test the live environment before considering installation.</p>
+        <p>NoahOS 2026.11.12 is a development pre-release. The update checker is an early prototype and does not yet install system updates. Back up important data and test the live environment before considering installation.</p>
     </div>
 </section>
 </main>
